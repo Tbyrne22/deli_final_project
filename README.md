@@ -13,11 +13,12 @@ Each student should put an 'X' under their name on the days they have meetings.
 | Nov 15 (Wed)|           |           |
 | Nov 20 (Mon)|           |           |
 | Nov 27 (Mon)|           |           |
-| Nov 29 (Mon)|           |   mm      |
+| Nov 29 (Mon)|           |           |
 
 ### December 2023
 
 | Date        | Student 1 | Student 2 |
+|-------------|-----------|-----------|
 | Dec 4 (Mon) |           |           |
 | Dec 6 (Wed) |           |           |
 | Dec 11 (Mon)|           |           |  
