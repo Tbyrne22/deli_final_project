@@ -8,14 +8,14 @@ Each student should put an 'X' under their name on the days they have meetings.
 
 ### November 2023
 
-| Date        |   Tommy   |  Roderic  |
-|-------------|-----------|-----------|
-| Nov 14 (Tue)|     X     |     X     |
-| Nov 15 (Wed)|           |           |
-| Nov 20 (Mon)|           |           |
-| Nov 22 (Wed)|           |           |
-| Nov 27 (Mon)|           |           |
-| Nov 29 (Wed)|           |           |
+| Date        |   Tommy  |  Roderic  |
+|-------------|----------|-----------|
+| Nov 14 (Tue)|     X    |     X     |
+| Nov 15 (Wed)|          |           |
+| Nov 20 (Mon)|          |           |
+| Nov 22 (Wed)|          |           |
+| Nov 27 (Mon)|          |           |
+| Nov 29 (Wed)|          |           |
 
 ### December 2023
 
