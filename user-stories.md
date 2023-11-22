@@ -18,4 +18,42 @@ Action: The search result description says "Try our sandwich of the month specia
 Result: Not Applicable Informational Text
 
 
+### Interest Epic
+#### User Story 1
+
+Jane sees the homepage after clicking on the website.
+
+Action: Homepage/hero section contains captive imagery and branch archetype themes, highlighting the special(s) of the month and their ingredients.
+
+Result: Jane stays on homepage to read about the specials and other menu items
+
+
+#### User Story 2
+
+Jane sees a promotion for the special(s) of the month.
+
+Action: Hero section contains a call to action for Jane to view the specials of the month.
+
+Result: Jane is interested to view the specials and clicks on the hero-section call to action
+
+
+#### User Story 3
+
+Jane sees an option to view the entire menu
+
+Action: Menu section contains a link to view the entire menu list.
+
+Result: Jane clicks on menu link
+
+
+#### User Story 4
+Jane is interested in the menu and would like to place an order.
+
+Action: Hero Section contains buttons to place a pickup or delivery order
+
+Result: Jane selects which order option she prefers
+
+
+
+
 
