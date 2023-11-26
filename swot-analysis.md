@@ -1,4 +1,4 @@
-# Corner Deli - SWOT Analysis
+# Expeditions Deli - SWOT Analysis
 
 
 | Strengths | Weaknesses |
