@@ -8,6 +8,7 @@ Action: Engage customers to subscribe to receive notifications such as the follo
 - seasonal sandwich offerings
 - limited-time offers and promotions
 - new stories
+
 Also, have clear information on the business catering offering and how to order
 
 Loyalty: 
