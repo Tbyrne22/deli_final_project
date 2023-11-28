@@ -8,7 +8,8 @@ Action: Engage customers to subscribe to receive notifications such as the follo
 - seasonal sandwich offerings
 - limited-time offers and promotions
 - new stories
-  Also, have clear information on the business catering offering and how to order
+
+Also, have clear information on the business catering offering and how to order
 
 Loyalty: 
 - Have a seamless order process (Let customers know that they can use delivery services like Uber Eats and GrubHub)

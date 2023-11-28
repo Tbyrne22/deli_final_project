@@ -23,4 +23,6 @@ Jane is twenty four years of age and is very curious about trying new foods that
 
 ### [Customer Journey](customer-journey.md)
 
+### [Task-Level User Stories](user-stories.md)
 
+[Figma Designs](https://www.figma.com/file/tz75GtZjtQWg1M2hw688YO/Expeditions-Deli?type=design&node-id=0-1&mode=design&t=EdBgz8iYh4zT6AOJ-0)
