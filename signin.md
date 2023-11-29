@@ -9,7 +9,7 @@
 | Nov 20 (Mon)|     X    |     X     |
 | Nov 21 (Tue)|     X    |     X     |
 | Nov 27 (Mon)|     X    |     X     |
-| Nov 29 (Wed)|          |           |
+| Nov 28 (Tue)|     X    |           |
 
 ### December 2023
 
