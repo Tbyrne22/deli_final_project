@@ -15,7 +15,7 @@
 
 | Date        |   Tommy   |  Roderic  |
 |-------------|-----------|-----------|
-| Dec 4 (Mon) |           |           |
+| Dec 4 (Mon) |           |    X      |
 | Dec 6 (Wed) |           |           |
 | Dec 11 (Mon)|           |           |  
 | Dec 13 (Wed)|           |           |
