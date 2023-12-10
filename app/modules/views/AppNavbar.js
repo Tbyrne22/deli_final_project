@@ -29,18 +29,20 @@ function AppNavbar() {
                 underline="none"
                 color="inherit"
                 href="/"
+                data-tag="logo"
                 sx={{ fontSize: 24 }}
             >
                 {'Expeditions Deli'}
             </Link>
           </Box>
-          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }} role="menu">
             <Link
               color="inherit"
               variant="h6"
               underline="none"
               href="/menu"
               sx={rightLink}
+              /*role="menuitem" */
             >
               {'Menu'}
             </Link>
@@ -50,6 +52,7 @@ function AppNavbar() {
               underline="none"
               href="/#specials"
               sx={rightLink}
+              role="menuitem"
             >
               {'Specials'}
             </Link>
@@ -59,6 +62,7 @@ function AppNavbar() {
               underline="none"
               href="/#subscribe"
               sx={rightLink}
+              role="menuitem"
             >
               {'Subscribe'}
             </Link>
@@ -67,6 +71,7 @@ function AppNavbar() {
               underline="none"
               href="/#order-now"
               sx={{ ...rightLink, ...orderNow }}
+              role="menuitem"
             >
               {'Order Now'}
             </Link>
