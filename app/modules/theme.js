@@ -87,6 +87,7 @@ const theme = {
       ...rawTheme.typography.h6,
       ...fontHeader,
       fontSize: 18,
+      textTransform:'titlecase'
     },
     subtitle1: {
       ...rawTheme.typography.subtitle1,
