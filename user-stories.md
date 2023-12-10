@@ -103,9 +103,16 @@ Jane is potentially interested in ordering from the deli in the future.
 
 Action: Hero contains a re-engage section with a "subscribe" call to action, which encourages customers to return for specials and promotions.
 
-Result: Jane enters email information and clicks "subscribe".
+Result: Jane enters email information and clicks "Keep Me Updated".
 
-### User Story 2
+#### User Story 2
+Jane clicks "Keep Me Updated" and would like confirmation that her action was successful.
+
+Action: Jane waits to see what happens.
+
+Result: Green checkmark appears, confirming she was successfully added to the email list.
+
+### User Story 3
 Jane is interested in viewing Expeditions Deli's social media pages
 
 Action: Footer contains links to Facebook and Instagram pages.
