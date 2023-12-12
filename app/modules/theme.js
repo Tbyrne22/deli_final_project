@@ -10,7 +10,7 @@ const rawTheme = createTheme({
     },
     secondary: {
       light: '#fff5f8',
-      main: '#ff3366',
+      main: '#f00f00',
       dark: '#e62958',
     },
     warning: {
@@ -61,7 +61,9 @@ const theme = {
       ...rawTheme.typography.h1,
       ...fontHeader,
       letterSpacing: 0,
-      fontSize: 60,
+      fontSize: 45,
+      fontFamily: 'Playfair Display',
+      textTransform: 'capitalize'
     },
     h2: {
       ...rawTheme.typography.h2,
@@ -80,8 +82,11 @@ const theme = {
     },
     h5: {
       ...rawTheme.typography.h5,
-      fontSize: 20,
+      fontSize: 18,
       fontWeight: rawTheme.typography.fontWeightLight,
+      fontFamily: 'Ubuntu',
+      letterSpacing: '1px',
+      textTransform: 'capitalize',
     },
     h6: {
       ...rawTheme.typography.h6,
@@ -94,13 +99,14 @@ const theme = {
       fontSize: 18,
     },
     body1: {
-      ...rawTheme.typography.body2,
+      ...rawTheme.typography.body1,
       fontWeight: rawTheme.typography.fontWeightRegular,
       fontSize: 16,
     },
     body2: {
-      ...rawTheme.typography.body1,
-      fontSize: 14,
+      ...rawTheme.typography.body2,
+      fontSize: 16,
+      fontFamily: 'Ubuntu',
     },
   },
 };

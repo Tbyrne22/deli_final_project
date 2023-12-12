@@ -5,7 +5,7 @@ import MuiTypography from '@mui/material/Typography';
 
 const markClassesMapping = {
   center: {
-    h1: '',
+    h1: 'OnePirateTypography-markedH1Center',
     h2: 'OnePirateTypography-markedH2Center',
     h3: 'OnePirateTypography-markedH3Center',
     h4: 'OnePirateTypography-markedH4Center',
@@ -31,6 +31,13 @@ const markClassesMapping = {
 };
 
 const styles = ({ theme }) => ({
+  [`& .${markClassesMapping.center.h1}`]: {
+    height: 3,
+    width: 134,
+    display: 'block',
+    margin: `18px auto 0`,
+    backgroundColor: theme.palette.secondary.main,
+  },
   [`& .${markClassesMapping.center.h2}`]: {
     height: 4,
     width: 73,
