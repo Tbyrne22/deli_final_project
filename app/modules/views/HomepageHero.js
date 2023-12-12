@@ -26,7 +26,7 @@ export default function HomepageHero() {
       <Typography color="inherit" align="center" variant="h5" component="h5" sx={{ mb: 0, mt: { xs: 4, sm: '28px' } }}>
         With Rotating Regional Dishes From Around The Globe
       </Typography>
-      <Typography variant="body2" color="inherit" sx={{ mt: '140px' }}>
+      <Typography variant="body2" color="inherit" sx={{ mt: { xs: '40px', sm:'140px'} }}>
         Discover Limited-Time Items
       </Typography>
       <Button color="secondary" variant="contained" size="large" component="a" href="/#specials" sx={{ minWidth: 200, mt: '18px' }}>
