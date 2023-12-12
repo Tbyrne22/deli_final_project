@@ -7,8 +7,9 @@ import Toolbar from '../components/Toolbar';
 const rightLink = {
   fontSize: 16,
   color: 'common.white',
-  ml: 3,
-  lineHeight:'38px'
+  ml: 8,
+  lineHeight:'38px',
+  fontWeight:400
 };
 
 const orderNow = {
@@ -30,7 +31,7 @@ function AppNavbar() {
                 color="inherit"
                 href="/"
                 data-tag="logo"
-                sx={{ fontSize: 24 }}
+                sx={{ fontSize: 24, fontFamily: 'Ubuntu' }}
             >
                 {'Expeditions Deli'}
             </Link>
