@@ -26,7 +26,7 @@ export default function Specials() {
         </Typography>
         
         <Container sx={{mt:'48px'}}>
-          <Grid container spacing={8}>
+          <Grid container>
             <Grid item xs={12} md={4}>
               <MediaCard 
                 title="Monthly Special" 

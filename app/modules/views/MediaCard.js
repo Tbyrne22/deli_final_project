@@ -22,7 +22,7 @@ export default function MediaCard(props) {
   const endText = (props.ends ? ' Ends ' + props.ends : '');
 
   return (
-    <Card sx={{ maxWidth: 262 }}>
+    <Card sx={{ maxWidth: {md: 262}, mx:'auto', mt:{xs:4, md:0} }}>
       <CardMedia
         sx={{ height: 146 }}
         image={props.image}
