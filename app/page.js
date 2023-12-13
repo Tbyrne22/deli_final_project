@@ -2,6 +2,7 @@
 import * as React from 'react';
 import AppNavbar from './modules/views/AppNavbar';
 import HomepageHero from './modules/views/HomepageHero';
+import Specials from './modules/views/Specials';
 import withRoot from './modules/withRoot';
 
 function Index() {
@@ -9,6 +10,7 @@ function Index() {
     <>
       <AppNavbar />
       <HomepageHero />
+      <Specials />
     </>
   );
 }

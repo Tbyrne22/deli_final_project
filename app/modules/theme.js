@@ -68,7 +68,8 @@ const theme = {
     h2: {
       ...rawTheme.typography.h2,
       ...fontHeader,
-      fontSize: 48,
+      fontSize: 36,
+      marginBottom:'24px',
     },
     h3: {
       ...rawTheme.typography.h3,
@@ -78,7 +79,10 @@ const theme = {
     h4: {
       ...rawTheme.typography.h4,
       ...fontHeader,
-      fontSize: 36,
+      fontSize: 20,
+      fontFamily: 'Ubuntu',
+      fontWeight:500,
+      textTransform: 'capitalize',
     },
     h5: {
       ...rawTheme.typography.h5,
@@ -101,7 +105,8 @@ const theme = {
     body1: {
       ...rawTheme.typography.body1,
       fontWeight: rawTheme.typography.fontWeightRegular,
-      fontSize: 16,
+      fontSize: 20,
+      fontFamily:'Ubuntu',
     },
     body2: {
       ...rawTheme.typography.body2,
