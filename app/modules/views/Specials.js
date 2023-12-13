@@ -10,7 +10,7 @@ const specialSection = {
   textAlign:'center',
   color:'#000',
   fontFamily:'Ubuntu',
-  paddingTop:{xs: 8}
+  py:{xs: 8}
 };
 
 export default function Specials() {
