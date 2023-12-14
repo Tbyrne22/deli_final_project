@@ -5,6 +5,7 @@ import HomepageHero from './modules/views/HomepageHero';
 import Specials from './modules/views/Specials';
 import OrderNow from './modules/views/OrderNow';
 import Catering from './modules/views/Catering';
+import Subscribe from './modules/views/Subscribe';
 import withRoot from './modules/withRoot';
 
 function Index() {
@@ -15,6 +16,7 @@ function Index() {
       <Specials />
       <OrderNow />
       <Catering />
+      <Subscribe />
     </>
   );
 }
