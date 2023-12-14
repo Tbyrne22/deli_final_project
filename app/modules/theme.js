@@ -78,7 +78,6 @@ const theme = {
       fontFamily:'Ubuntu',
       textDecoration:'underline',
       textTransform:'capitalize',
-      marginTop:'24px',
     },
     h4: {
       ...rawTheme.typography.h4,
