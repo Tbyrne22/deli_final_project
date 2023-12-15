@@ -25,7 +25,7 @@ const rawTheme = createTheme({
     success: {
       light: green[50],
       main: green[500],
-      dark: green[700],
+      dark: '#2E7D32', // green[700],
     },
   },
   typography: {
