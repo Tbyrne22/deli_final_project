@@ -5,7 +5,7 @@ import MuiButton from '@mui/material/Button';
 const ButtonRoot = styled(MuiButton)(({ theme, size }) => ({
   borderRadius: 4,
   fontWeight: 700,
-  fontFamily: 'Roboto',
+  fontFamily: 'Ubuntu',
   padding: theme.spacing(2, 4),
   fontSize: '16px',
   boxShadow: 'none',
@@ -13,9 +13,9 @@ const ButtonRoot = styled(MuiButton)(({ theme, size }) => ({
   '&:active, &:focus': {
     boxShadow: 'none',
   },
-  '&:hover':{
-    backgroundColor:'#f00f00',
-  },
+  // '&:hover':{
+  //   backgroundColor:'#f00f00',
+  // },
   ...(size === 'small' && {
     padding: theme.spacing(1, 3),
     fontSize: theme.typography.pxToRem(13),
