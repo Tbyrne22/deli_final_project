@@ -19,4 +19,4 @@
 | Dec 7 (Thr) |     X     |    X      |
 | Dec 9 (Sat) |     X     |    X      | 
 | Dec 11 (Mon)|     X     |    X      |  
-| Dec 14 (Thr)|           |    X      |
+| Dec 14 (Thr)|     X     |    X      |
