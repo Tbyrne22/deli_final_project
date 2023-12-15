@@ -5,6 +5,12 @@ import ProductHeroLayout from './ProductHeroLayout';
 
 const backgroundImage = 'images/hero-image.png';
 
+const heroAction = {
+   '&:hover':{
+    backgroundColor:'#f00f00',
+  },
+};
+
 export default function HomepageHero() {
   return (
     <ProductHeroLayout
@@ -29,7 +35,7 @@ export default function HomepageHero() {
       <Typography variant="body2" color="inherit" sx={{ mt: { xs: '40px', sm:'140px'} }}>
         Discover Limited-Time Items
       </Typography>
-      <Button color="secondary" variant="contained" size="large" component="a" href="/#specials" sx={{ minWidth: 200, mt: '18px' }}>
+      <Button color="secondary" variant="contained" size="large" component="a" href="/#specials" sx={{...heroAction, minWidth: 200, mt: '18px' }}>
         View Specials
       </Button>
 
