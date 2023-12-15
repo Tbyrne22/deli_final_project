@@ -6,13 +6,71 @@ import Typography from '../components/Typography';
 import TextField from '../components/TextField';
 import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import CancelOutlined from '@mui/icons-material/CancelOutlined';
+import HourglassTopOutlinedIcon from '@mui/icons-material/HourglassTopOutlined';
+import InputAdornment from '@mui/material/InputAdornment';
 
 function Subscribe() {
   const [open, setOpen] = React.useState(false);
+  const [emailValue, setEmailValue] = React.useState('');
+  const [status, setStatus] = React.useState(null);
 
-  const handleSubmit = (event) => {
+  const statusOkStyle = {
+    backgroundColor:'success.dark',
+    width:40,
+    height:40,
+    borderRadius:'4px',
+    color:'#FFF',
+    p:'7px'
+  };
+  const statusErrorStyle = {
+    ...statusOkStyle,
+    backgroundColor:'error.main',
+  };
+  const statusLoadingStyle = {
+    ...statusOkStyle,
+    backgroundColor:'#1E92F4',
+  };
+
+  const onEmailChange = (event) => {
+    setEmailValue(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setOpen(true);
+    setStatus(null);
+    //console.log('Email: ', emailValue);
+
+    if(!emailValue){
+      setStatus({'error': 'Please enter a valid email'});
+      setOpen(true);
+    }
+    else{
+      setStatus({'loading': true});
+
+      const resp = await fetch('/api/subscribe-user', {
+        body: JSON.stringify({'email': emailValue}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        method: 'POST',
+      });
+      
+      console.log('RESP: ', resp);
+      
+      if (resp.ok) {
+        setStatus({'ok': true});
+        setEmailValue('');
+        //console.log('OK subscribed');
+      } else {
+        const data = await resp.json();
+        console.log('Error: ', data);
+        setStatus({'error': data.error});
+        setOpen(true);
+      }
+      
+    }
   };
 
   const handleClose = () => {
@@ -37,14 +95,48 @@ function Subscribe() {
               <Typography variant="h2" component="h2" gutterBottom>
                 Get Notified
               </Typography>
-              <Typography variant="h5">
+              <Typography variant="h5" sx={{fontSize:20}}>
                 New specials and discounted offers
               </Typography>
               <TextField
                 noBorder
                 placeholder="Enter your email"
+                autoCorrect="off"
+                value={emailValue}
+                onChange={onEmailChange}
                 variant="standard"
                 sx={{ width: '100%', mt: 3, mb: 2 }}
+                InputProps={{
+                  endAdornment:(
+                    <InputAdornment position="end">
+                      {
+                        status && status.ok ?
+                          (
+                            <Box sx={{...statusOkStyle}}>
+                              <CheckCircleOutlineIcon />
+                            </Box>
+                          ) : (
+                            status && status.error ?
+                            (
+                              <Box sx={{...statusErrorStyle}}>
+                                <CancelOutlined />
+                              </Box>
+                            ) : (
+                              status && status.loading ?
+                              (
+                                <Box sx={{...statusLoadingStyle}}>
+                                  <HourglassTopOutlinedIcon />
+                                </Box>
+                              ) : (
+                                <></>
+                              )
+                            )
+                          )
+                      }                      
+                      
+                    </InputAdornment>
+                  )
+                }}
               />
               <Button
                 type="submit"
@@ -83,7 +175,8 @@ function Subscribe() {
       <Snackbar
         open={open}
         closeFunc={handleClose}
-        message="We will send you our best offers, once a week."
+        message={status && status.error}
+        onClose={handleClose}  
       />
     </Container>
   );
