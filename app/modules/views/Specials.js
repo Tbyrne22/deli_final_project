@@ -16,8 +16,8 @@ const specialSection = {
 export default function Specials() {
   return (
     <Box component="section" sx={{...specialSection}}>
-      <Container>
-        
+      <a name="specials"></a>
+      <Container>        
         <Typography color="inherit" align="center" variant="h2" component="h2" marked="center">
           Specials
         </Typography>      
