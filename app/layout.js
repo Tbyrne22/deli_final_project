@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import CookieBanner from '@/components/CookieBanner';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +19,10 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&family=Roboto&family=Playfair+Display&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}
+        <GoogleAnalytics measurementId='G-XFQ3KSWWJV'/>
+        
+      </body>
     </html>
   )
 }
