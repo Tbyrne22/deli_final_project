@@ -17,7 +17,7 @@ export default function HomepageHero() {
       sxBackground={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundColor: '#7fc7d9', // Average color of the background image.
-        backgroundPosition: 'center',
+        backgroundPosition: 'center top',
       }}
     >
       {/* Increase the network loading priority of the background image. */}
