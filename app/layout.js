@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </head>
       <body className={inter.className}>{children}
-        <GoogleAnalytics GA_MEASUREMENT_ID='G-XFQ3KSWWJV'/>
+        <GoogleAnalytics measurementId='G-XFQ3KSWWJV'/>
         
       </body>
     </html>

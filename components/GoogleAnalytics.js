@@ -5,22 +5,22 @@ import {usePathname, useSearchParams} from 'next/navigation';
 import { useEffect } from 'react';
 import {pageview} from '@/lib/gtagHelper';
 
-export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
+export default function GoogleAnalytics({ measurementId }) {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
     useEffect(() => {
         const url = pathname + searchParams.toString();
 
-        pageview(GA_MEASUREMENT_ID, url);
-    }, [pathname, searchParams, GA_MEASUREMENT_ID])
+        pageview(measurementId, url);
+    }, [pathname, searchParams, measurementId])
 
 
   return (
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
       />
       <Script
         id="google-analytics"
@@ -35,7 +35,7 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
                 'analytics_storage': 'denied'
             });
             
-            gtag('config', '${GA_MEASUREMENT_ID}', {
+            gtag('config', '${measurementId}', {
                 page_path: window.location.pathname,
             });
             `
