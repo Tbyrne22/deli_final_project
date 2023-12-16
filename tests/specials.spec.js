@@ -22,7 +22,7 @@ test.beforeEach(async ({ page }) => {
 // });
 
 // // Locate subheader with text "Order soon to not miss out!"
-// test('Check speecials text', async ({ page }) => {
+// test('Check specials text', async ({ page }) => {
 
 //     const elementsWithSpecialsText = await page.locator('p:has-text("Order soon to not miss out!")');
 
