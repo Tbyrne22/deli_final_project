@@ -35,7 +35,7 @@ export default function HomepageHero() {
       <Typography variant="body2" color="inherit" sx={{ mt: { xs: '40px', sm:'140px'} }}>
         Discover Limited-Time Items
       </Typography>
-      <Button color="secondary" variant="contained" size="large" component="a" href="/#specials" sx={{...heroAction, minWidth: 200, mt: '18px' }}>
+      <Button color="secondary" variant="contained" size="large" component="a" href="/#specials" sx={{...heroAction, minWidth: 200, mt: '18px' }} aria-label="View Specials Button">
         View Specials
       </Button>
 
