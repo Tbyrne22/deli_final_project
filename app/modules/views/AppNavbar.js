@@ -21,7 +21,10 @@ const orderNow = {
     borderRadius: '4px',
     background: '#ED2C2C',
     padding: '6px 16px',
-    lineHeight:'25px'
+    lineHeight:'25px',
+    '&:hover': {
+      backgroundColor:'#aa2e25',
+    }
 };
 
   
