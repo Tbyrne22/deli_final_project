@@ -7,7 +7,7 @@ const backgroundImage = 'images/hero-image.png';
 
 const heroAction = {
    '&:hover':{
-    backgroundColor:'#f00f00',
+    backgroundColor:'#aa2e25',
   },
 };
 

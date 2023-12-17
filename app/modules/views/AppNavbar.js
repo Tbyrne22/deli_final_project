@@ -7,6 +7,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
+const logoLink = {
+  color:'inherit',
+  fontSize: 24,
+  fontFamily: 'Ubuntu',
+  textDecoration:'none',
+  '&:hover': {
+    opacity:0.6,
+  }
+};
 
 const rightLink = {
   fontSize: 16,
@@ -14,17 +23,21 @@ const rightLink = {
   ml: {md: 4, lg: 8},
   lineHeight:'38px',
   fontWeight:400,
-  display:{sm: 'none', md: 'block'}
+  display:{sm: 'none', md: 'block'},
+  '&:hover': {
+    opacity:0.6,
+  }
 };
 
 const orderNow = {
-    borderRadius: '4px',
-    background: '#ED2C2C',
-    padding: '6px 16px',
-    lineHeight:'25px',
-    '&:hover': {
-      backgroundColor:'#aa2e25',
-    }
+  borderRadius: '4px',
+  background: '#ED2C2C',
+  padding: '6px 16px',
+  lineHeight:'25px',
+  '&:hover': {
+    backgroundColor:'#aa2e25',
+    opacity:1,
+  }
 };
 
   
@@ -46,12 +59,10 @@ function AppNavbar() {
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ flex: 1 }}>
             <Link
-                variant="h6"
-                underline="none"
-                color="inherit"
+                variant="h6"                
                 href="/"
                 data-tag="logo"
-                sx={{ fontSize: 24, fontFamily: 'Ubuntu' }}
+                sx={{...logoLink}}
             >
                 {'Expeditions Deli'}
             </Link>
