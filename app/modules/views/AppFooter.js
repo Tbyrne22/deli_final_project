@@ -8,11 +8,9 @@ import Typography from '../components/Typography';
 function Copyright() {
   return (
     <React.Fragment>
-      {'© '}
-      <Link color="inherit" href="mailto:expeditionsdeli@gmail.com">
-        expeditionsdeli.com
-      </Link>{' '}
-      {new Date().getFullYear()}
+      <Typography color="inherit" variant="p">
+        expeditionsdeli@gmail.com
+      </Typography>
     </React.Fragment>
   );
 }
@@ -46,7 +44,7 @@ export default function AppFooter() {
               spacing={2}
               sx={{ height: 120 }}
             >
-              <Grid item sx={{ display: 'flex' }}>
+              <Grid item sx={{ display: 'flex' }} class="social links">
                 <Box component="a" href="https://facebook.com" target="_new" rel="noopener" sx={iconStyle}>
                   <img
                     src="/static/themes/onepirate/appFooterFacebook.png"
