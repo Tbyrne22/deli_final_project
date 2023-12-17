@@ -1,58 +1,121 @@
-"use client"
+'use client'
 
-import Link from "next/link"
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+import Button from '@/app/modules/components/Button';
+import InfoIcon from '@mui/icons-material/Info';
+import Slide from '@mui/material/Slide';
 import { getLocalStorage, setLocalStorage } from '@/lib/storageHelper';
 import { useState, useEffect } from 'react';
+import Typography from '@/app/modules/components/Typography';
+
+function Transition(props) {
+  return <Slide {...props} direction="up" />;
+}
+
+const cookieContainer = {
+  backgroundColor:'#FFFFFF',
+  height: {xs:'auto', md:'358px'},
+  position: 'fixed',
+  bottom:0,
+  zIndex:10,
+  width:'100%',
+};
+
+const buttonCss = {
+  px:'16px',
+  py:'8px',
+  color:'#FFFFFF',
+  fontWeight:500,
+  ml:'40px',
+  mt:{xs:'24px', md:'0'},
+  lineHeight:'16px',
+};
+
+const acceptCss = {
+  backgroundColor:'#008000',
+  '&:hover':{
+    backgroundColor:'#4caf50',
+  }
+};
+
+const rejectCss = {
+  backgroundColor:'#F00F00',
+  '&:hover':{
+    backgroundColor:'#f44336',
+  }
+}
 
 export default function CookieBanner() {
-    const [cookieConsent, setCookieConsent] = useState(false)
+  const [open, setOpen] = useState(false);
 
-    useEffect(() => {
-      const storedCookieConsent = getLocalStorage("cookie_consent", null)
+  useEffect(() => {
+    onLoad();
+  }, []);  
+
+  const onLoad = () => {
+    const storedCookieConsent = getLocalStorage("cookie_consent", null);
+    console.log('IN onload, stored value: ', storedCookieConsent);
+    consentChanged(storedCookieConsent);
+    console.log('Consent set', storedCookieConsent);
     
-      setCookieConsent(storedCookieConsent)
-    }, [setCookieConsent])
-    
-    useEffect(() => {
-      const newValue = cookieConsent ? "granted" : "denied"
-    
-      window.gtag("consent", "update", {
-        analytics_storage: newValue
-      })
-    
-      setLocalStorage("cookie_consent", cookieConsent)
-    
-      console.log("Cookie Consent: ", cookieConsent)
-    }, [cookieConsent])
-    
+    if(storedCookieConsent == null) setOpen(true);
+  };
+  
+  const consentChanged = (cookieConsent) => {
+    const newValue = cookieConsent ? "granted" : "denied"
+    console.log('IN consent changed', newValue, cookieConsent);
+
+    window.gtag("consent", "update", {
+      analytics_storage: newValue
+    });
+  
+    setLocalStorage("cookie_consent", cookieConsent);
+  
+    console.log("Cookie Consent: ", cookieConsent, newValue);
+  };
+  
+  const acceptCookie = () => {
+    consentChanged(true);
+    setOpen(false);
+  };
+
+  const rejectCookie = () => {
+    consentChanged(false);
+    setOpen(false);
+  };
 
   return (
-    <div
-      className={`my-10 mx-auto max-w-max md:max-w-screen-sm
-                            fixed bottom-0 left-0 right-0 
-                            flex px-3 md:px-4 py-3 justify-between items-center flex-col sm:flex-row gap-4  
-                             bg-gray-700 rounded-lg shadow`}
-    >
-      <div className="text-center">
-        <Link href="/info/cookies">
-          <p>
-            We use <span className="font-bold text-sky-400">cookies</span> on
-            our site.
-          </p>
-        </Link>
-      </div>
+    <Box sx={{...cookieContainer, display:`${open ? "block":"none"}`}}>
+      <Box sx={{ width:{xs:'auto', md:'892px', lg:'1256px'}, mx:{xs:3, md:'auto'}, 
+        padding:{xs:'24px 0', md:'58px 0 118px 0'}, position:'relative'}}>
+        <Typography align="center" variant="h4" component="h4" sx={{fontFamily:'Work Sans', fontSize:30, fontWeight:400}}>
+          Cookies Policy Notification
+        </Typography>
 
-      <div className="flex gap-2">
-        <button className="px-5 py-2 text-gray-300 rounded-md border-gray-900"
-            onClick={() => setCookieConsent(false)} >
-          Decline
-        </button>
-        <button className="bg-gray-900 px-5 py-2 text-white rounded-lg"
-         onClick={() => setCookieConsent(true)}
+        <Box sx={{
+          border:'solid 1px #CCCCCC', 
+          backgroundColor:'#FFF5F8', 
+          pl:'10px', pr:'20px', py:'18px', 
+          mt:{xs:'24px', md:'55px'}, 
+          display: {xs:'block', md:'flex'},
+          alignItems:'center',
+        }}
         >
-          Allow Cookies
-        </button>
-      </div>
-    </div>
-  )
+          <InfoIcon sx={{display:{xs: 'none', md: 'block'} }} />
+          <Box sx={{width:{xs:'auto', md:'460px', lg:'815px'}, ml:'10px'}}>
+            <Typography sx={{fontFamily:'Roboto'}}>
+              We use cookies on our website to enhance your browsing experience. By clicking 'Accept,' you agree to 
+              the use of cookies as described in our Cookie Policy. You can manage your preferences and learn more 
+              about our use of cookies by visiting our <Link href="/policy">Privacy Policy</Link>.
+            </Typography>
+          </Box>
+
+          <Button sx={{...buttonCss, ...rejectCss, ml:{xs:'10px', md:'40px'}}} onClick={rejectCookie}>Reject Cookies</Button>
+          <Button sx={{...buttonCss, ...acceptCss}} onClick={acceptCookie} >Accept Cookies</Button>
+        </Box>
+      </Box>
+    </Box>
+      
+  );
 }
