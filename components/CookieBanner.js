@@ -15,7 +15,7 @@ function Transition(props) {
 
 const cookieContainer = {
   backgroundColor:'#FFFFFF',
-  height: {xs:'auto', md:'358px'},
+  height: {xs:'auto', md:'auto'},
   position: 'fixed',
   bottom:0,
   zIndex:10,
@@ -88,16 +88,11 @@ export default function CookieBanner() {
   return (
     <Box sx={{...cookieContainer, display:`${open ? "block":"none"}`}}>
       <Box sx={{ width:{xs:'auto', md:'892px', lg:'1256px'}, mx:{xs:3, md:'auto'}, 
-        padding:{xs:'24px 0', md:'58px 0 118px 0'}, position:'relative'}}>
-        <Typography align="center" variant="h4" component="h4" sx={{fontFamily:'Work Sans', fontSize:30, fontWeight:400}}>
-          Cookies Policy Notification
-        </Typography>
-
+        padding:{xs:'24px 0', md:'24px 0 24px 0'}, position:'relative'}}>
         <Box sx={{
           border:'solid 1px #CCCCCC', 
           backgroundColor:'#FFF5F8', 
           pl:'10px', pr:'20px', py:'18px', 
-          mt:{xs:'24px', md:'55px'}, 
           display: {xs:'block', md:'flex'},
           alignItems:'center',
         }}
