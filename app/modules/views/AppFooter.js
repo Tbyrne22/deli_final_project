@@ -5,16 +5,6 @@ import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
 
-function Copyright() {
-  return (
-    <React.Fragment>
-      <Typography color="inherit" variant="p">
-        expeditionsdeli@gmail.com
-      </Typography>
-    </React.Fragment>
-  );
-}
-
 const iconStyle = {
   width: 48,
   height: 48,
@@ -44,7 +34,7 @@ export default function AppFooter() {
               spacing={2}
               sx={{ height: 120 }}
             >
-              <Grid item sx={{ display: 'flex' }} class="social links">
+              <Grid item sx={{ display: 'flex' }} nodetag="social links">
                 <Box component="a" href="https://facebook.com" target="_new" rel="noopener" sx={iconStyle}>
                   <img
                     src="/static/themes/onepirate/appFooterFacebook.png"
@@ -58,8 +48,10 @@ export default function AppFooter() {
                   />
                 </Box>
               </Grid>
-              <Grid item sx={{fontSize:16}}>
-                <Copyright />
+              <Grid item>
+              <Typography color="inherit" sx={{fontSize:16}}>
+                expeditionsdeli@gmail.com
+              </Typography>
               </Grid>
             </Grid>
           </Grid>
