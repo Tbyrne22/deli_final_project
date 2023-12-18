@@ -63,11 +63,12 @@ function AppNavbar() {
                 href="/"
                 data-tag="logo"
                 sx={{...logoLink}}
+                aria-label="Expeditions Deli"
             >
                 {'Expeditions Deli'}
             </Link>
           </Box>
-          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }} role="menu">
+          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }} role="menu" aria-label="Navigation Menu">
             <Link
               color="inherit"
               variant="h6"
@@ -75,6 +76,7 @@ function AppNavbar() {
               href="/menu"
               sx={rightLink}
               /*role="menuitem" */
+              aria-label="Menu"
             >
               {'Menu'}
             </Link>
@@ -85,6 +87,7 @@ function AppNavbar() {
               href="/#specials"
               sx={rightLink}
               role="menuitem"
+              aria-label="Specials"
             >
               {'Specials'}
             </Link>
@@ -95,6 +98,7 @@ function AppNavbar() {
               href="/#subscribe"
               sx={rightLink}
               role="menuitem"
+              aria-label="Subscribe"
             >
               {'Subscribe'}
             </Link>
@@ -104,6 +108,7 @@ function AppNavbar() {
               href="/#order-now"
               sx={{ ...rightLink, ...orderNow }}
               role="menuitem"
+              aria-label="Order Now"
             >
               {'Order Now'}
             </Link>
@@ -114,22 +119,23 @@ function AppNavbar() {
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
               onClick={onMenuClick}
+              aria-label="Menu Icon"
             />
 
             <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={onMenuClose}
               MenuListProps={{ 'aria-labelledby': 'menu-button', }}
               sx={{ width:400}}
             >
-              <MenuItem onClick={onMenuClose}>
+              <MenuItem onClick={onMenuClose} aria-label="Menu">
                 <Link underline="none" href="/menu">{'Menu'}</Link>
               </MenuItem>
-              <MenuItem onClick={onMenuClose}>
+              <MenuItem onClick={onMenuClose} aria-label="Specials">
                 <Link underline="none" href="/#specials">{'Specials'}</Link>
               </MenuItem>
-              <MenuItem onClick={onMenuClose}>
+              <MenuItem onClick={onMenuClose} aria-label="Subscribe">
                 <Link underline="none" href="/#subscribe">{'Subscribe'}</Link>
               </MenuItem>
-              <MenuItem onClick={onMenuClose}>
+              <MenuItem onClick={onMenuClose} aria-label="Order Now">
                   <Link underline="none" href="/#order-now">{'Order Now'}</Link>
               </MenuItem>
             </Menu>
