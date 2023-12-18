@@ -23,7 +23,7 @@ const rightLink = {
   ml: {md: 4, lg: 8},
   lineHeight:'38px',
   fontWeight:400,
-  display:{sm: 'none', md: 'block'},
+  display:{xs: 'none', md: 'block'},
   '&:hover': {
     opacity:0.6,
   }
