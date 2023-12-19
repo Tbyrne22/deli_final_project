@@ -94,7 +94,7 @@ function Subscribe() {
               }}
             >
               <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
-                <Typography variant="h2" component="h2" sx={{fontFamily:'Ubuntu', fontSize:48}} gutterBottom>
+                <Typography variant="h2" component="h2" sx={{fontFamily:'Ubuntu', fontSize:48, mb:'14px'}} gutterBottom>
                   Get Notified
                 </Typography>
                 <Typography variant="h5" sx={{fontSize:20, fontWeight:400}}>
