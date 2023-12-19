@@ -41,7 +41,7 @@ export default function Specials() {
               </Grid>
               <Grid item xs={12} md={4}>
                 <MediaCard 
-                  title="Discount Special 1" 
+                  title="Smoked Turkey" 
                   image="/images/card-image-2.png"
                   text="Smoked Turkey Hero with candied walnuts - substitute with portobello mushrooms."
                   price="11.99"
@@ -50,7 +50,7 @@ export default function Specials() {
               </Grid>
               <Grid item xs={12} md={4}>
                 <MediaCard 
-                  title="Discount Special 2" 
+                  title="Roasted Pork" 
                   image="/images/card-image-3.png"
                   text="Roasted Pork Hero with dill-dijon mustard sauce in a seeded ciabatta roll."
                   price="10.99"
