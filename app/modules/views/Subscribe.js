@@ -78,7 +78,7 @@ function Subscribe() {
   };
 
   return (
-    <Container component="section" sx={{ mt:24, mb:18, display: 'flex' }}>
+    <Container component="section" sx={{ mt:25, mb:18, display: 'flex' }}>
     <a name="subscribe"></a>
       <Grid container>
         <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
@@ -162,8 +162,8 @@ function Subscribe() {
             alt="Get notified"
             sx={{
               position: 'absolute',
-              top: -28,
-              left: -28,
+              top: -56,
+              left: -48,
               right: 0,
               bottom: 0,
               width: '446px',

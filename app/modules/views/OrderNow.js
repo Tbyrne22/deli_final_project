@@ -10,7 +10,8 @@ const orderNowSection = {
   textAlign:'center',
   color:'#000',
   fontFamily:'Ubuntu',
-  py:{xs: 8}
+  pt:{xs: 8, md:26},
+  pb:{xs: 8}
 };
 
 export default function OrderNow() {
