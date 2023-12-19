@@ -87,15 +87,16 @@ function Subscribe() {
               display: 'flex',
               justifyContent: 'center',
               bgcolor: 'warning.main',
-              py: 8,
-              px: 3,
+              pt: '54px',
+              pb: 8,
+              px: 8,
             }}
           >
             <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
-              <Typography variant="h2" component="h2" gutterBottom>
+              <Typography variant="h2" component="h2" sx={{fontFamily:'Ubuntu', fontSize:48}} gutterBottom>
                 Get Notified
               </Typography>
-              <Typography variant="h5" sx={{fontSize:20}}>
+              <Typography variant="h5" sx={{fontSize:20, fontWeight:400}}>
                 New specials and discounted offers
               </Typography>
               <TextField
@@ -142,7 +143,7 @@ function Subscribe() {
                 type="submit"
                 color="primary"
                 variant="contained"
-                sx={{ width: '100%' }}
+                sx={{ width: '100%', fontSize:14 }}
               >
                 Keep me updated
               </Button>
