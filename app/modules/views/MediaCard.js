@@ -3,7 +3,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 export default function MediaCard(props) {
@@ -15,6 +14,7 @@ export default function MediaCard(props) {
     color: '#000000',
     textDecoration: 'line-through',
     fontSize:16,
+    ml:'auto !important'
   };
   const markup = (props.discount ? (parseFloat(props.price) + parseFloat(props.discount)) : null);
   const priceText = '$' + props.price + (props.discount ? ' ($' + props.discount + ' OFF)' : '');
@@ -43,9 +43,11 @@ export default function MediaCard(props) {
         <Typography sx={{...discountStyle}}>
           {discountText}
         </Typography>
+        { endText != '' ? (
         <Typography sx={{color:"#FF0000", fontSize:16, ml:'auto !important'}}>
           {endText}
-        </Typography>        
+        </Typography>
+        ) : ''}
       </CardActions>
     </Card>
   );
