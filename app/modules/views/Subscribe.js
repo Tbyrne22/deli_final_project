@@ -80,7 +80,7 @@ function Subscribe() {
   return (
     <>
       <a name="subscribe"></a>
-      <Container component="section" sx={{ mt:25, mb:18, display: 'flex' }}>
+      <Container component="section" sx={{ mt:{xs:8, md:25}, mb:{xs:8, md:18}, display: 'flex' }}>
         <Grid container>
           <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
             <Box
