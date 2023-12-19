@@ -78,108 +78,110 @@ function Subscribe() {
   };
 
   return (
-    <Container component="section" sx={{ mt:25, mb:18, display: 'flex' }}>
-    <a name="subscribe"></a>
-      <Grid container>
-        <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              bgcolor: 'warning.main',
-              pt: '54px',
-              pb: 8,
-              px: 8,
-            }}
-          >
-            <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
-              <Typography variant="h2" component="h2" sx={{fontFamily:'Ubuntu', fontSize:48}} gutterBottom>
-                Get Notified
-              </Typography>
-              <Typography variant="h5" sx={{fontSize:20, fontWeight:400}}>
-                New specials and discounted offers
-              </Typography>
-              <TextField
-                noBorder
-                placeholder="Enter your email"
-                autoCorrect="off"
-                value={emailValue}
-                onChange={onEmailChange}
-                variant="standard"
-                sx={{ width: '100%', mt: 3, mb: 2 }}
-                InputProps={{
-                  endAdornment:(
-                    <InputAdornment position="end">
-                      {
-                        status && status.ok ?
-                          (
-                            <Box sx={{...statusOkStyle}}>
-                              <CheckCircleOutlineIcon />
-                            </Box>
-                          ) : (
-                            status && status.error ?
+    <>
+      <a name="subscribe"></a>
+      <Container component="section" sx={{ mt:{xs:8, md:25}, mb:{xs:8, md:18}, display: 'flex' }}>
+        <Grid container>
+          <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                bgcolor: 'warning.main',
+                pt: '54px',
+                pb: 8,
+                px: 8,
+              }}
+            >
+              <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
+                <Typography variant="h2" component="h2" sx={{fontFamily:'Ubuntu', fontSize:48, mb:'14px'}} gutterBottom>
+                  Get Notified
+                </Typography>
+                <Typography variant="h5" sx={{fontSize:20, fontWeight:400}}>
+                  New specials and discounted offers
+                </Typography>
+                <TextField
+                  noBorder
+                  placeholder="Enter your email"
+                  autoCorrect="off"
+                  value={emailValue}
+                  onChange={onEmailChange}
+                  variant="standard"
+                  sx={{ width: '100%', mt: 3, mb: 2 }}
+                  InputProps={{
+                    endAdornment:(
+                      <InputAdornment position="end">
+                        {
+                          status && status.ok ?
                             (
-                              <Box sx={{...statusErrorStyle}}>
-                                <CancelOutlined />
+                              <Box sx={{...statusOkStyle}}>
+                                <CheckCircleOutlineIcon />
                               </Box>
                             ) : (
-                              status && status.loading ?
+                              status && status.error ?
                               (
-                                <Box sx={{...statusLoadingStyle}}>
-                                  <HourglassTopOutlinedIcon />
+                                <Box sx={{...statusErrorStyle}}>
+                                  <CancelOutlined />
                                 </Box>
                               ) : (
-                                <></>
+                                status && status.loading ?
+                                (
+                                  <Box sx={{...statusLoadingStyle}}>
+                                    <HourglassTopOutlinedIcon />
+                                  </Box>
+                                ) : (
+                                  <></>
+                                )
                               )
                             )
-                          )
-                      }                      
-                      
-                    </InputAdornment>
-                  )
-                }}
-              />
-              <Button
-                type="submit"
-                color="primary"
-                variant="contained"
-                sx={{ width: '100%', fontSize:14 }}
-              >
-                Keep me updated
-              </Button>
+                        }                      
+                        
+                      </InputAdornment>
+                    )
+                  }}
+                />
+                <Button
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  sx={{ width: '100%', fontSize:14 }}
+                >
+                  Keep me updated
+                </Button>
+              </Box>
             </Box>
-          </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ display: { md: 'block', xs: 'none' }, position: 'relative' }}
+          >
+            
+            <Box
+              component="img"
+              src="/images/subscribe-bg.png"
+              alt="Get notified"
+              sx={{
+                position: 'absolute',
+                top: -56,
+                left: -48,
+                right: 0,
+                bottom: 0,
+                width: '446px',
+                height:'372px',
+              }}
+            />
+          </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: { md: 'block', xs: 'none' }, position: 'relative' }}
-        >
-          
-          <Box
-            component="img"
-            src="/images/subscribe-bg.png"
-            alt="Get notified"
-            sx={{
-              position: 'absolute',
-              top: -56,
-              left: -48,
-              right: 0,
-              bottom: 0,
-              width: '446px',
-              height:'372px',
-            }}
-          />
-        </Grid>
-      </Grid>
-      <Snackbar
-        open={open}
-        closeFunc={handleClose}
-        message={status && status.error}
-        onClose={handleClose}  
-      />
-    </Container>
+        <Snackbar
+          open={open}
+          closeFunc={handleClose}
+          message={status && status.error}
+          onClose={handleClose}  
+        />
+      </Container>
+    </>
   );
 }
 

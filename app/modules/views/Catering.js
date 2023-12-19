@@ -15,22 +15,27 @@ const sectionFont = {
 };
 
 const cateringStyle = {
-  width:'482px',
+  width:'480px',
   height:'292px', 
-  background: 'url(/images/catering-image.png), lightgray 50% / cover no-repeat',
+  background: 'url(/images/catering-image.png)',
+  backgroundSize:'cover',
+  backgroundRepeat:'no-repeat',
   border:'solid 2px #000000',
   display:'flex',
   alignItems: 'center',
-  filter: 'blur(1px)',
-  mx:{xs:'auto', md:'0'},
+  mx:{xs:'auto', md:0},
 };
 
 const cateringInner = {
   width:'350px',
-  height:'120px',
+  height:'118px',
   textAlign:'center',
   mx:'auto',
   background:'rgba(255, 255, 255, 0.50)',
+  mixBlendMode:'hard-light',
+  display:'flex',
+  alignItems: 'center',
+  justifyContent:'center',
 };
 const cateringInnerText = {
   color:'#FFFFFF',
@@ -38,18 +43,19 @@ const cateringInnerText = {
   fontSize:'36px',
   textTransform:'capitalize',
   letterSpacing:'0.4px',
+  lineHeight:'50px',
   fontWeight:500,
   textShadow:'-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
-  mixBlendMode:'hard-light',
 };
 
 const subs = {
   mt:{xs:6, md:0},
-  ml:{xs:0, md: 12},
+  ml:{xs:0, md:6, lg:12},
   display:'flex',
+  justifyContent: 'center',
 };
 const subBag = {
-  width:298,
+  width:{xs:298, md:234, lg:298},
   py:3,
   borderRadius:'40px',
   background:'#FFF',
@@ -72,45 +78,42 @@ const subBagText = {
 export default function Catering() {
   return (
     <Box component="section" sx={{...sectionFont}}>
-      <Container>
-        
-        <Typography color="inherit" align="center" variant="h2" component="h2" marked="center">
-          Catering
-        </Typography>      
-        
-        <Container sx={{mt:'80px', display:{xs:'block', md:'flex'}}}>
-          <Box sx={{...cateringStyle}}>
-            <Box sx={{...cateringInner}}>
-              <Typography sx={{...cateringInnerText}}>
-                Convenient Bundles for your needs
-              </Typography>
-            </Box>
+      <Typography color="inherit" align="center" variant="h2" component="h2" marked="center">
+        Catering
+      </Typography>      
+      
+      <Container sx={{mt:'80px', px:'0 !important', display:{xs:'block', md:'flex', justifyContent:'center'}}}>
+        <Box sx={{...cateringStyle}}>
+          <Box sx={{...cateringInner}}>
+            <Typography sx={{...cateringInnerText}}>
+              Convenient Bundles for your needs
+            </Typography>
           </Box>
-          <Box sx={{...subs}}>
-            <Box sx={{...subBag}}>
-              <Typography variant="h3" color="inherit" align="center" component="h3">
-                Sub Bag
-              </Typography>
-              <Box component="img" sx={{mt:5}}
-                src="/images/lunch-bag.png" alt="Sub Bag"
-              />
-              <Typography sx={{...subBagText}}>
-                Six 6" Subs<br />Servers: 6
-              </Typography>              
-            </Box>
-            <Box sx={{...subBox}}>
+        </Box>
+        <Box sx={{...subs}}>
+          <Box sx={{...subBag}}>
             <Typography variant="h3" color="inherit" align="center" component="h3">
-                Sub Box
-              </Typography>
-              <Box component="img" sx={{mt:5}}
-                src="/images/lunch-box.png" alt="Sub Box"
-              />
-              <Typography sx={{...subBagText}}>
-                Six 12" Subs<br />Servers: 12
-              </Typography>              
-            </Box>
+              Sub Bag
+            </Typography>
+            <Box component="img" sx={{mt:5}}
+              src="/images/lunch-bag.png" alt="Sub Bag"
+            />
+            <Typography sx={{...subBagText}}>
+              Six 6" Subs<br />Servers: 6
+            </Typography>              
           </Box>
-        </Container>
+          <Box sx={{...subBox}}>
+            <Typography variant="h3" color="inherit" align="center" component="h3">
+              Sub Box
+            </Typography>
+            <Box component="img" sx={{mt:5}}
+              src="/images/lunch-box.png" alt="Sub Box"
+            />
+            <Typography sx={{...subBagText}}>
+              Six 12" Subs<br />Servers: 12
+            </Typography>              
+          </Box>
+        </Box>
       </Container>
     </Box>   
   );
