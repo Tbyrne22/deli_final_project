@@ -9,6 +9,17 @@ const font = {
     fontSize:16,
 };
 
+const imgStyle = {
+  maxWidth:128, 
+  maxHeight:86, 
+  mx:'auto',
+  my:'auto',  
+  '&:hover': {
+    opacity: 0.65,
+    borderBottom:'solid 4px #FFF'
+  }
+};
+
 export default function DeliveryService(props) {
    return (
     <Box sx={{textAlign:"center"}}>
@@ -16,7 +27,7 @@ export default function DeliveryService(props) {
             href={props.link} target="_new"
             rel="noopener"
         >
-            <Box component="img" src={props.image} sx={{maxWidth:128, maxHeight:86, mx:"auto", my:"auto"}} alt={props.title} />
+            <Box component="img" src={props.image} sx={{...imgStyle}} alt={props.title} />
         </Link>
         
         <Rating name="read-only" precision={0.5} size="small" value={props.rating} readOnly />
