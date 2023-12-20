@@ -99,7 +99,7 @@ export default function Catering() {
               src="/images/lunch-bag.png" alt="Sub Bag"
             />
             <Typography sx={{...subBagText}}>
-              Six 6" Subs<br />Servers: 6
+              Six 6&quot; Subs<br />Servers: 6
             </Typography>              
           </Box>
           <Box sx={{...subBox}}>
@@ -110,7 +110,7 @@ export default function Catering() {
               src="/images/lunch-box.png" alt="Sub Box"
             />
             <Typography sx={{...subBagText}}>
-              Six 12" Subs<br />Servers: 12
+              Six 12&quot; Subs<br />Servers: 12
             </Typography>              
           </Box>
         </Box>

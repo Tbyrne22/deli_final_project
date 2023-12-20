@@ -44,7 +44,7 @@ const privacyPage = {
             </li>
             <li>
               <Typography variant="body2">
-                <strong>Usage Information:</strong> This includes information about how you interact with our website, such as your IP address, browser type, pages visited, and the time and date of your visit. This information helps us improve our website's functionality and user experience.
+                <strong>Usage Information:</strong> This includes information about how you interact with our website, such as your IP address, browser type, pages visited, and the time and date of your visit. This information helps us improve our website&apos;s functionality and user experience.
               </Typography>
             </li>
           </Typography>
@@ -63,7 +63,7 @@ const privacyPage = {
             </li>
             <li>
               <Typography variant="body2">
-                To personalize your experience and improve our website's functionality and content.
+                To personalize your experience and improve our website&apos;s functionality and content.
               </Typography>
             </li>
             <li>
