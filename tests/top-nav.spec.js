@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-const websiteURL = 'http://localhost:3000';
+const websiteURL = 'https://is601-final-proj-jnpuhe7es-roderics-projects.vercel.app/';
 
 // // Expected constants.
 const expectedLogoText = 'Expeditions Deli';

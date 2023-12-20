@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-const websiteURL = 'http://localhost:3000';
+const websiteURL = 'https://is601-final-proj-jnpuhe7es-roderics-projects.vercel.app/';
 
 // Expected constants.
 const expectedFooterURLs = ['https://facebook.com', 'https://twitter.com'];
@@ -21,13 +21,13 @@ test('Check for email', async ({ page }) => {
 // Check that facebook and twitter links work
 test('Check socials links', async ({ page }) => {
     // Finding the container section that holds the socials links
-    const footerSection = await page.$('.css-1wu66hi-MuiContainer-root');
+    const footerSection = await page.$('.MuiContainer-root.MuiContainer-maxWidthLg.css-1f554vw');
     let count= 0;
 
     // Extracting all the href links within the container
     const links = await footerSection.evaluate(() => {
         // Selecting all anchor tags within the container
-        const anchors = document.querySelectorAll('.css-1wu66hi-MuiContainer-root a');
+        const anchors = document.querySelectorAll('.MuiContainer-root.MuiContainer-maxWidthLg.css-1f554vw a');
         // Extracting and filtering href attributes, excluding empty ones
         return Array.from(anchors, link => link.getAttribute('href')).filter(href => href);
     });

@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-const websiteURL = 'http://localhost:3000';
+const websiteURL = 'https://is601-final-proj-jnpuhe7es-roderics-projects.vercel.app/';
 
 // Expected constants
 const expectedDeliveryLinks = 3;
@@ -37,12 +37,12 @@ test('Check Order Now text', async ({ page }) => {
 // Locate three links for delivery services and check that they work
 test('Check delivery links', async ({ page }) => {
     // Finding the container section that holds the delivery links
-    const deliverySection = await page.$('.MuiContainer-root.MuiContainer-maxWidthLg.css-j101yz-MuiContainer-root');
+    const deliverySection = await page.$('.MuiContainer-root.MuiContainer-maxWidthLg.css-1qsxih2');
     
     // Extracting all the href links within the container
     const links = await deliverySection.evaluate(() => {
         // Selecting all anchor tags within the container
-        const anchors = document.querySelectorAll('.MuiBox-root.css-xi606m a');
+        const anchors = document.querySelectorAll('.MuiBox-root.css-z3pfex a');
         // Extracting and filtering href attributes, excluding empty ones
         return Array.from(anchors, link => link.getAttribute('href')).filter(href => href);
     });
