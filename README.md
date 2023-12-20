@@ -29,6 +29,9 @@ Jane is twenty four years of age and is very curious about trying new foods that
 
 
 ## Submission Details:
+
+#### [PDF Submission](Expeditions-Deli-Submission.pdf)
+
 #### [Video Presentation](https://youtu.be/7jBQVj3aPp4)
 
 #### [PPT Presentation](IS601_Expeditions-deli.pptx)
