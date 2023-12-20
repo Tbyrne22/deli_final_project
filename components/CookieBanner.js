@@ -100,7 +100,7 @@ export default function CookieBanner() {
           <InfoIcon sx={{display:{xs: 'none', md: 'block'} }} />
           <Box sx={{width:{xs:'auto', md:'460px', lg:'815px'}, ml:'10px'}}>
             <Typography sx={{fontFamily:'Roboto'}}>
-              We use cookies on our website to enhance your browsing experience. By clicking 'Accept,' you agree to 
+              We use cookies on our website to enhance your browsing experience. By clicking &apos;Accept,&apos; you agree to 
               the use of cookies as described in our Cookie Policy. You can manage your preferences and learn more 
               about our use of cookies by visiting our <Link href="/policy">Privacy Policy</Link>.
             </Typography>
