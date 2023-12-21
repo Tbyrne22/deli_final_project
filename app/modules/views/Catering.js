@@ -15,8 +15,8 @@ const sectionFont = {
 };
 
 const cateringStyle = {
-  width:'480px',
-  height:'292px', 
+  width:{xs:'94%', sm:'480px'},
+  height:{xs: '274px', sd:'292px'},
   background: 'url(/images/catering-image.png)',
   backgroundSize:'cover',
   backgroundRepeat:'no-repeat',
@@ -27,7 +27,7 @@ const cateringStyle = {
 };
 
 const cateringInner = {
-  width:'350px',
+  width:{xs:'90%', sm:'350px'},
   height:'118px',
   textAlign:'center',
   mx:'auto',
@@ -40,7 +40,7 @@ const cateringInner = {
 const cateringInnerText = {
   color:'#FFFFFF',
   textAlign:'center',
-  fontSize:'36px',
+  fontSize:{xs:'30px', sm:'36px'},
   textTransform:'capitalize',
   letterSpacing:'0.4px',
   lineHeight:'50px',
