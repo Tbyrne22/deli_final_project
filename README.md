@@ -37,6 +37,6 @@ Jane is twenty four years of age and is very curious about trying new foods that
 
 #### [PPT Presentation](IS601_Expeditions-deli.pptx)
 
-#### [Vercel Deployment](https://is601-final-proj-jnpuhe7es-roderics-projects.vercel.app/)
+#### [Vercel Deployment](https://is601-final-proj.vercel.app/)
 
 #### [Figma Design](https://www.figma.com/file/tz75GtZjtQWg1M2hw688YO/Expeditions-Deli?type=design&node-id=0-1&mode=design&t=EdBgz8iYh4zT6AOJ-0)
