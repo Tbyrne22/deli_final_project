@@ -27,7 +27,7 @@ const buttonCss = {
   py:'8px',
   color:'#FFFFFF',
   fontWeight:500,
-  ml:'40px',
+  ml:{xs:'10px', md:'40px'},
   mt:{xs:'24px', md:'0'},
   lineHeight:'16px',
 };
@@ -106,7 +106,7 @@ export default function CookieBanner() {
             </Typography>
           </Box>
 
-          <Button sx={{...buttonCss, ...rejectCss, ml:{xs:'10px', md:'40px'}}} onClick={rejectCookie}>Reject Cookies</Button>
+          <Button sx={{...buttonCss, ...rejectCss}} onClick={rejectCookie}>Reject Cookies</Button>
           <Button sx={{...buttonCss, ...acceptCss}} onClick={acceptCookie} >Accept Cookies</Button>
         </Box>
       </Box>
