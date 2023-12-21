@@ -51,6 +51,7 @@ const cateringInnerText = {
 const subs = {
   mt:{xs:6, md:0},
   ml:{xs:0, md:6, lg:12},
+  px:{xs:'14px', sm:0},
   display:'flex',
   justifyContent: 'center',
 };
@@ -63,7 +64,7 @@ const subBag = {
 };
 const subBox = {
   ...subBag,
-  ml:'36px',
+  ml:{xs:'24px', sm:'36px'},
 };
 
 const subBagText = {
