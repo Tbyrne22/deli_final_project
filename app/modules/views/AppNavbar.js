@@ -9,7 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 const logoLink = {
   color:'inherit',
-  fontSize: '24px !important',
+  fontSize: {xs:'22px !important', sm:'24px !important'},
   fontFamily: 'Ubuntu',
   textDecoration:'none',
   '&:hover': {
